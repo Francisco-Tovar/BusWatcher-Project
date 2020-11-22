@@ -1,0 +1,46 @@
+﻿@using WebApp.Helpers;
+<script src="~/Scripts/Views/vUsuarios.js"></script>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.CtrlTable(viewName: "vUsuarios", id: "tblUsuarios", title: "Lista de usuarios",
+    columnsTitle: "Cedula,Nombre,Apellido1,Apellido2,Fecha de Nacimiento,Correo,Contrasena,Telefono,Estado", 
+    ColumnsDataName: "cedula,nombre,apellido1,apellido2,dob,correoUsuario,contrasena,telefono,estadoUsuario",
+    onSelectFunction: "BindFields")
+
+
+<div class="card border-secondary" style="margin-top: 50px;">
+    <div class="card-header">
+        <div class="row pull-right">
+            <div class="col-md-8">Edicion de usuarios</div>
+            <div class="col-md-4">
+                @Html.CtrlButton(viewName: "vUsuarios", id: "btnCreate", label: "Create", onClickFunction: "Create", buttonType: "success")
+                @Html.CtrlButton(viewName: "vUsuarios", id: "btnDeactivate", label: "On/Off", onClickFunction: "Deactivate", buttonType: "danger")
+                @Html.CtrlButton(viewName: "vUsuarios", id: "btnUpdate", label: "Update", onClickFunction: "Update", buttonType: "info")
+                @Html.CtrlButton(viewName: "vUsuarios", id: "btnDelete", label: "Delete", onClickFunction: "Delete", buttonType: "danger")
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="bs-component">
+                    <form id="frmEdition">
+                        @Html.CtrlInput(id: "txtCedula", type: "text", label: "Cedula", columnDataName: "cedula")
+                        @Html.CtrlInput(id: "txtName", type: "text", label: "Nombre", columnDataName: "nombre")
+                        @Html.CtrlInput(id: "txtApellido1", type: "text", label: "Primer apellido", columnDataName: "apellido1")
+                        @Html.CtrlInput(id: "txtApellido2", type: "text", label: "Segundo apellido", columnDataName: "apellido2")
+                        @Html.CtrlInput(id: "txtDOB", type: "date", label: "Fecha de Nacimiento", columnDataName: "dob")
+                        @Html.CtrlInput(id: "txtEmail", type: "text", label: "E-mail", columnDataName: "correoUsuario")
+                        @Html.CtrlInput(id: "txtPass", type: "text", label: "Password", columnDataName: "contrasena")
+                        @Html.CtrlInput(id: "txtTelefono", type: "number", label: "Telefono", columnDataName: "telefono")
+                        @Html.CtrlInput(id: "txtEstado", type: "text", label: "Estado", columnDataName: "estadoUsuario")
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
