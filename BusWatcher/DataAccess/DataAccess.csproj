@@ -44,12 +44,14 @@
   <ItemGroup>
     <Compile Include="Crud\CrudFactory.cs" />
     <Compile Include="Crud\EmpresaCrudFactory.cs" />
+    <Compile Include="Crud\ListOptionCrudFactory.cs" />
     <Compile Include="Crud\RolCrudFactory.cs" />
     <Compile Include="Crud\UsuarioCrudFactory.cs" />
     <Compile Include="Mapper\EmpresaMapper.cs" />
     <Compile Include="Mapper\EntityMapper.cs" />
     <Compile Include="Mapper\IObjectMapper.cs" />
     <Compile Include="Mapper\ISqlStatements.cs" />
+    <Compile Include="Mapper\ListOptionMapper.cs" />
     <Compile Include="Mapper\RolMapper.cs" />
     <Compile Include="Mapper\UsuarioMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

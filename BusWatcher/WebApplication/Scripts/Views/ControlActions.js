@@ -78,10 +78,10 @@ function ControlActions() {
 		var data = {};
 
 		$('#' + formId + ' *').filter(':input').each(function (input) {
-			var columnDataName = $(this).attr("ColumnDataName");
+			var columnDataName = $(this).attr("ColumnDataName");            
 			data[columnDataName] = this.value;
 		});
-
+		
 		console.log(data);
 		return data;
 	}

@@ -9,7 +9,7 @@
         <div class="row pull-right">
             <div class="col-md-2">Registro de Administrador</div>
             <div class="col-md-3">
-                @Html.CtrlButton(viewName: "vUsuarios", id: "btnCreate", label: "Create", onClickFunction: "Create", buttonType: "success")                
+                @Html.CtrlButton(viewName: "vRegistrarAdmin", id: "btnCreate", label: "Create", onClickFunction: "Create", buttonType: "success")                
             </div>
         </div>
     </div>
@@ -21,9 +21,7 @@
                         @Html.CtrlInput(id: "txtCedula", type: "text", label: "Cedula", columnDataName: "cedula")
                         @Html.CtrlInput(id: "txtName", type: "text", label: "Nombre", columnDataName: "nombre")
                         @Html.CtrlInput(id: "txtApellido1", type: "text", label: "Primer apellido", columnDataName: "apellido1")
-                        @Html.CtrlInput(id: "txtApellido2", type: "text", label: "Segundo apellido", columnDataName: "apellido2")
-                        
-
+                        @Html.CtrlInput(id: "txtApellido2", type: "text", label: "Segundo apellido", columnDataName: "apellido2")                        
                     </form>
                 </div>
             </div>
@@ -33,7 +31,8 @@
                         @Html.CtrlInput(id: "txtTelefono", type: "number", label: "Telefono", columnDataName: "telefono")
                         @Html.CtrlInput(id: "txtDOB", type: "date", label: "Fecha de Nacimiento", columnDataName: "dob")
                         @Html.CtrlInput(id: "txtEmail", type: "text", label: "E-mail", columnDataName: "correoUsuario")
-                        @Html.CtrlInput(id: "txtPass", type: "pass", label: "Password", columnDataName: "contrasena")
+                        @Html.CtrlInput(id: "txtPass", type: "password", label: "Password", columnDataName: "contrasena")
+                        @Html.CtrlDropDown(id: "idRol", label: "Rol", listId: "TROL", columnDataName: "idRol")
                     </form>
                 </div>
             </div>

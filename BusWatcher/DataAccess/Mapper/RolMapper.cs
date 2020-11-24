@@ -8,6 +8,7 @@ namespace DataAcess.Mapper
     {
         private const string DB_COL_NOMBREROL = "NombreRol";
         private const string DB_COL_ESTADOROL = "EstadoRol";
+        private const string DB_COL_IDROL = "IdRol";
 
         public SqlOperation GetCreateStatement(BaseEntity entity)
         {
@@ -73,6 +74,7 @@ namespace DataAcess.Mapper
         {
             var rol = new Rol
             {
+                idRol = GetIntValue(row,DB_COL_IDROL),
                 nombreRol = GetStringValue(row, DB_COL_NOMBREROL),
                 estadoRol = GetStringValue(row, DB_COL_ESTADOROL)
             };

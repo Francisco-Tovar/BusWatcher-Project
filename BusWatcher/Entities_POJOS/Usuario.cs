@@ -1,9 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities_POJOS
 {
@@ -18,6 +14,7 @@ namespace Entities_POJOS
         public int telefono { get; set; }
         public string estadoUsuario { get; set; }
         public string contrasena { get; set; }
+        public int idRol { get; set; }
         public Usuario() { }
     }
 }

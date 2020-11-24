@@ -15,6 +15,7 @@ namespace DataAcess.Mapper
         private const string DB_COL_CONTRASENA = "Contrasena";
         private const string DB_COL_TELEFONO = "Telefono";
         private const string DB_COL_ESTADOUSUARIO = "EstadoUsuario";
+        private const string DB_COL_IDROL = "IdRol";
 
         public SqlOperation GetCreateStatement(BaseEntity entity)
         {
@@ -30,6 +31,7 @@ namespace DataAcess.Mapper
             operation.AddVarcharParam(DB_COL_CONTRASENA, u.contrasena);
             operation.AddIntParam(DB_COL_TELEFONO, u.telefono);
             operation.AddVarcharParam(DB_COL_ESTADOUSUARIO, u.estadoUsuario);
+            operation.AddIntParam(DB_COL_IDROL, u.idRol);
 
             return operation;
         }
@@ -64,6 +66,7 @@ namespace DataAcess.Mapper
             operation.AddVarcharParam(DB_COL_CONTRASENA, u.contrasena);
             operation.AddIntParam(DB_COL_TELEFONO, u.telefono);
             operation.AddVarcharParam(DB_COL_ESTADOUSUARIO, u.estadoUsuario);
+            operation.AddIntParam(DB_COL_IDROL, u.idRol);
 
             return operation;
         }
@@ -102,7 +105,8 @@ namespace DataAcess.Mapper
                 correoUsuario = GetStringValue(row, DB_COL_CORREOUSUARIO),
                 contrasena = GetStringValue(row, DB_COL_CONTRASENA),
                 telefono = GetIntValue(row, DB_COL_TELEFONO),
-                estadoUsuario = GetStringValue(row, DB_COL_ESTADOUSUARIO)
+                estadoUsuario = GetStringValue(row, DB_COL_ESTADOUSUARIO),
+                idRol = GetIntValue(row, DB_COL_IDROL)
             };
 
             return usuario;

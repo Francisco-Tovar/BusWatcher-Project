@@ -4,7 +4,7 @@ function vUsuarios() {
 	this.tblUsuariosId = 'tblUsuarios';
 	this.service = 'usuario';
 	this.ctrlActions = new ControlActions();
-	this.columns = "cedula,nombre,apellido1,apellido2,dob,correoUsuario,contrasena,telefono,estadoUsuario";
+	this.columns = "cedula,nombre,apellido1,apellido2,dob,correoUsuario,contrasena,telefono,estadoUsuario,idRol";
 
 	this.RetrieveAll = function () {
 		this.ctrlActions.FillTable(this.service, this.tblUsuariosId, false);
@@ -17,6 +17,8 @@ function vUsuarios() {
 	this.Create = function () {
 		var usuarioData = {};
 		usuarioData = this.ctrlActions.GetDataForm('frmEdition');
+		usuarioData.estadoUsuario = "Activo";
+		usuarioData.idRol = 1;
 		//Hace el post al create
 		this.ctrlActions.PostToAPI(this.service, usuarioData);
 		//Refresca la tabla

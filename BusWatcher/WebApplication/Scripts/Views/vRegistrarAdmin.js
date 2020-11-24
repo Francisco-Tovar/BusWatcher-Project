@@ -9,7 +9,8 @@ function vRegistrarAdmin() {
 		var usuarioData = {};
 		usuarioData = this.ctrlActions.GetDataForm('frmRegistro');
 		// estado predeterminado del usuario puede cambiarse a pendiente luego para aprobacion
-		usuarioData.estadoUsuario = "Activo";
+		usuarioData.estadoUsuario = "Pendiente";
+		//usuarioData.idRol = 1;
 		//Hace el post al create
 		this.ctrlActions.PostToAPI(this.service, usuarioData);
 		
@@ -18,11 +19,10 @@ function vRegistrarAdmin() {
 
 }
 
-//ON DOCUMENT READY
-$(document).ready(function () {
+////ON DOCUMENT READY
+//$(document).ready(function () {
 
-	var vusuario = new vUsuarios();
+//	var vusuario = new vUsuarios();
 	
-
-});
+//});
 
